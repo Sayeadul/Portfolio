@@ -126,11 +126,12 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.section-label, .section-title, .service-card, .project-card, .p-step').forEach(el => observer.observe(el));
+document.querySelectorAll('.section-label, .section-title, .service-card, .project-card, .p-step, .pricing-card, .pricing-subtitle').forEach(el => observer.observe(el));
 
 document.querySelectorAll('.services-grid .service-card').forEach((c, i) => { c.style.transitionDelay = (i * 0.13) + 's'; });
 document.querySelectorAll('.portfolio-grid .project-card').forEach((c, i) => { c.style.transitionDelay = (i * 0.13) + 's'; });
 document.querySelectorAll('.process-track .p-step').forEach((s, i) => { s.style.transitionDelay = (i * 0.13) + 's'; });
+document.querySelectorAll('.pricing-grid .pricing-card').forEach((c, i) => { c.style.transitionDelay = (i * 0.15) + 's'; });
 
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
